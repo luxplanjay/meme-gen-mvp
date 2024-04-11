@@ -1,31 +1,16 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-body {
-  margin: 0;
+  font-family: Impact, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
 .page {
-  padding: 0 15px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  min-height: 100vh;
   align-items: center;
-  justify-content: center;
 }
 
-.container {
+.meme-container {
   position: relative;
-  max-width: 600px;
+  margin-bottom: 32px;
 }
 
 .image {
@@ -35,32 +20,38 @@ body {
 }
 
 .top-text, .bottom-text {
+  width: 100%;
   text-align: center;
-  font-size: 24px;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
   margin: 0;
-  font-weight: 700;
   color: #fff;
   -webkit-text-stroke: 1px black;
 }
 
 .top-text {
   position: absolute;
-  top: 0;
+  top: 12px;
 }
 
 .bottom-text {
   position: absolute;
-  bottom: 0;
+  bottom: 12px;
 }
 
 .next-btn {
   border: none;
-  padding: 8px 24px;
-  font: inherit;
+  padding: 12px 16px;
   cursor: pointer;
-  background-color:cyan;
+  background-color:#FF5062;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 24px;
+  color: #fff;
+  letter-spacing: 0.5px;
 }
 
 .next-btn:hover {
-  background-color: orangered;
+  background-color: #B70042;
 }

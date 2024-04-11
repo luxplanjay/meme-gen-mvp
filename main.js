@@ -3,23 +3,28 @@ import './style.css';
 const memes = [
   {
     img: 'https://c4.wallpaperflare.com/wallpaper/277/354/502/feelsbadman-pepe-meme-memes-wallpaper-preview.jpg',
-    text: 'meme 1 text',
+    topText: 'meme 1 top text',
+    bottomText: 'meme 1 bottom text',
   },
   {
     img: 'https://i.insider.com/6011ac2b6dfbe10018e0049f?width=700',
-    text: 'meme 2 text',
+    topText: 'meme 2 top text',
+    bottomText: 'meme 2 bottom text',
   },
   {
     img: 'https://assets.entrepreneur.com/content/3x2/2000/20180703190744-rollsafe-meme.jpeg?format=pjeg&auto=webp&crop=16:9',
-    text: 'meme 3 text',
+    topText: 'meme 3 top text',
+    bottomText: 'meme 3 bottom text',
   },
   {
     img: 'https://images.jpost.com/image/upload/q_auto/c_fill,g_faces:center,h_537,w_822/485633',
-    text: 'meme 4 text',
+    topText: 'meme 4 top text',
+    bottomText: 'meme 4 bottom text',
   },
   {
     img: 'https://media-cldnry.s-nbcnews.com/image/upload/rockcms/2022-01/210602-doge-meme-nft-mb-1715-8afb7e.jpg',
-    text: 'meme 5 text',
+    topText: 'meme 5 top text',
+    bottomText: 'meme 5 bottom text',
   },
 ];
 
@@ -35,7 +40,8 @@ document.querySelector('.next-btn').addEventListener('click', () => {
   }
 
   document.querySelector('.image').src = memes[selectedMemeIdx].img;
-  // document.querySelector('.text').textContent = memes[selectedMemeIdx].text;
+  document.querySelector('.top-text').textContent = memes[selectedMemeIdx].topText;
+  document.querySelector('.bottom-text').textContent = memes[selectedMemeIdx].bottomText;
 });
 
 
