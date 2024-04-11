@@ -26,22 +26,6 @@ const memes = [
 let selectedMemeIdx = 0;
 const firstIndex = 0;
 const lastIndex = memes.length - 1;
-const image = document.querySelector('.image');
-const text = document.querySelector('.text');
-
-image.src = memes[selectedMemeIdx].img;
-text.textContent = memes[selectedMemeIdx].text;
-
-document.querySelector('.prev-btn').addEventListener('click', () => {
-  if (selectedMemeIdx === firstIndex) {
-    selectedMemeIdx = lastIndex;
-  } else {
-    selectedMemeIdx -= 1;
-  }
-
-  image.src = memes[selectedMemeIdx].img;
-  text.textContent = memes[selectedMemeIdx].text;
-});
 
 document.querySelector('.next-btn').addEventListener('click', () => {
   if (selectedMemeIdx === lastIndex) {
@@ -50,6 +34,8 @@ document.querySelector('.next-btn').addEventListener('click', () => {
     selectedMemeIdx += 1;
   }
 
-  image.src = memes[selectedMemeIdx].img;
-  text.textContent = memes[selectedMemeIdx].text;
+  document.querySelector('.image').src = memes[selectedMemeIdx].img;
+  // document.querySelector('.text').textContent = memes[selectedMemeIdx].text;
 });
+
+

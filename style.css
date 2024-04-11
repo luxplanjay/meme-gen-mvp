@@ -13,7 +13,7 @@ body {
   margin: 0;
 }
 
-.container {
+.page {
   padding: 0 15px;
   display: flex;
   flex-direction: column;
@@ -23,26 +23,44 @@ body {
   justify-content: center;
 }
 
+.container {
+  position: relative;
+  max-width: 600px;
+}
+
 .image {
   display: block;
   max-width: 100%;
+  object-fit: cover;
 }
 
-.text {
+.top-text, .bottom-text {
   text-align: center;
-  font-size: 20px;
+  font-size: 24px;
   margin: 0;
+  font-weight: 700;
+  color: #fff;
+  -webkit-text-stroke: 1px black;
 }
 
-.controls {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
+.top-text {
+  position: absolute;
+  top: 0;
 }
 
-button {
+.bottom-text {
+  position: absolute;
+  bottom: 0;
+}
+
+.next-btn {
   border: none;
   padding: 8px 24px;
   font: inherit;
   cursor: pointer;
+  background-color:cyan;
+}
+
+.next-btn:hover {
+  background-color: orangered;
 }
