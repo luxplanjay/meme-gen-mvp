@@ -1,38 +1,48 @@
 
 .page {
+  font-family: Arial, sans-serif;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  
   min-height: 100vh;
   margin: 0;
-  background-color: lightgoldenrodyellow;
+  padding-left: 8px;
+  padding-right: 8px;
+  background-image: url(./assets/bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .meme-container {
   position: relative;
-  margin-bottom: 32px;
+  margin-bottom: 20px;
 }
 
 .image {
   display: block;
   max-width: 100%;
-  object-fit: cover;
 }
 
 .top-text, .bottom-text {
   position: absolute;
   width: 100%;
-  text-align: center;
-  font-size: 18px;
+
+  margin: 0;
+  
+  font-family: Impact, sans-serif;
+  
+  font-size: 24px;
   line-height: 24px;
   letter-spacing: 0.5px;
-  margin: 0;
   color: #fff;
+
   -webkit-text-stroke: 1px black;
-  font-family: Impact, sans-serif;
+
+  text-align: center;
 }
 
 .top-text {
@@ -44,17 +54,27 @@
 }
 
 .next-btn {
-  border: none;
-  padding: 12px 16px;
-  cursor: pointer;
   background-color:#FF5062;
-  border-radius: 12px;
-  font-size: 14px;
-  line-height: 24px;
   color: #fff;
+
+  border: none;
+  border-radius: 16px;
+
+  padding: 20px;
+  cursor: pointer;
+  
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
   letter-spacing: 0.5px;
 }
 
 .next-btn:hover {
   background-color: #B70042;
+}
+
+.author {
+  margin-top: 40px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
 }
