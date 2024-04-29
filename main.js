@@ -1,46 +1,75 @@
 import './style.css';
 
-const memes = [
+let memes = [
   {
-    img: 'https://c4.wallpaperflare.com/wallpaper/277/354/502/feelsbadman-pepe-meme-memes-wallpaper-preview.jpg',
-    topText: 'meme 1 top text',
-    bottomText: 'meme 1 bottom text',
+    img: "https://ac.goit.global/meme-generator/1.jpg",
+    top: "Коли після вихідних намагаєшся налаштуватися на роботу",
+    bottom: "Ненько, куди ж я тут тицяв?",
   },
   {
-    img: 'https://i.insider.com/6011ac2b6dfbe10018e0049f?width=700',
-    topText: 'meme 2 top text',
-    bottomText: 'meme 2 bottom text',
+    img: "https://ac.goit.global/meme-generator/2.jpg",
+    top: "Коли вже пів години читаєш про програмування",
+    bottom: "Але так і не вийшов на дохід у $2000+",
   },
   {
-    img: 'https://assets.entrepreneur.com/content/3x2/2000/20180703190744-rollsafe-meme.jpeg?format=pjeg&auto=webp&crop=16:9',
-    topText: 'meme 3 top text',
-    bottomText: 'meme 3 bottom text',
+    img: "https://ac.goit.global/meme-generator/3.jpg",
+    top: "Автомеханік: єдина професія, де платять за те, що ти налажав у попередньому замовленні.",
+    bottom: "Програмісти:",
   },
   {
-    img: 'https://images.jpost.com/image/upload/q_auto/c_fill,g_faces:center,h_537,w_822/485633',
-    topText: 'meme 4 top text',
-    bottomText: 'meme 4 bottom text',
+    img: "https://ac.goit.global/meme-generator/4.jpg",
+    top: "А коли ви почали працювати у цій компанії?",
+    bottom: "Коли мені пригрозили звільненням",
   },
   {
-    img: 'https://media-cldnry.s-nbcnews.com/image/upload/rockcms/2022-01/210602-doge-meme-nft-mb-1715-8afb7e.jpg',
-    topText: 'meme 5 top text',
-    bottomText: 'meme 5 bottom text',
+    img: "https://ac.goit.global/meme-generator/5.jpg",
+    top: "В нас в сім’ї немає програмістів",
+    bottom: "Закодований Дід",
   },
+  {
+    img: "https://ac.goit.global/meme-generator/6.jpg",
+    top: "Дедлайни",
+    bottom: "Я: сильніше",
+  },
+  {
+    img: "https://ac.goit.global/meme-generator/7.jpg",
+    top: "В тебе хіба не горить важливий дедлайн?",
+    bottom: "Я: так, а що?",
+  },
+  {
+    img: "https://ac.goit.global/meme-generator/8.jpg",
+    top: "Я спокійно дивлюсь на імейл про терміновий звіт",
+    bottom: "бо знаю, що на нього піде як мінімум 2-3 тижні",
+  },
+  {
+    img: "https://ac.goit.global/meme-generator/9.jpg",
+    top: "Коли збрехав у резюме",
+    bottom: "але ти швидко все схоплюєш на льоту",
+  },
+  {
+    img: "https://ac.goit.global/meme-generator/10.jpg",
+    top: "Тім лід не може вигоріти",
+    bottom: "бо лід не горить, а тане",
+  }
 ];
 
-let selectedMemeIdx = 0;
 
-document.querySelector('.next-btn').addEventListener('click', () => {
-  if (selectedMemeIdx === memes.length - 1) {
-    selectedMemeIdx = 0;
+let image = document.querySelector('.image');
+let topText = document.querySelector('.top-text');
+let bottomText = document.querySelector('.bottom-text');
+let button = document.querySelector('.next-btn');
+
+let memeIndex = 0;
+
+button.addEventListener('click', () => {
+  if (memeIndex === memes.length - 1) {
+    memeIndex = 0;
   } else {
-    selectedMemeIdx += 1;
+    memeIndex += 1;
   }
 
-  const meme = memes[selectedMemeIdx];
-  document.querySelector('.image').src = meme.img;
-  document.querySelector('.top-text').textContent = meme.topText;
-  document.querySelector('.bottom-text').textContent = meme.bottomText;
+  image.src = memes[memeIndex].img;
+  topText.textContent = memes[memeIndex].top;
+  bottomText.textContent = memes[memeIndex].bottom;
 });
-
 
